@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mBook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/m-logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/m-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <main class="navbar-main">
+            <nav class="nav-bar">
+                <div class="left">
+                    <h1 class="m-logo">mBook</h1>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#home">New Feed</a></li>
+                        <li><a href="#contact">Messages</a></li>
+                        <li><a href="#home">Notifications</a></li>
+                        <li><a href="#home">Show profile</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </main>
+        <section class="align">
+            <div class="lefted">
+                <div class="profile-info">
+                    <div class="circle"><img src="/images/11.jpg" width="100" alt="" class="imag"></div>
+                    <h2 class="profile-name">Mehran Khan</h2>
+                    <h6 class="job">Web developer</h6>
+                    <h3 class="following">Following</h3>
+                    <h4 class="following-count">300</h4>
+                    <h3 class="follower">Followers</h3>
+                    <h4 class="follower-count">236</h4>
+                </div>
+                <div class="friends">
+                    <div>
+                        <h4 class="suggestions">Suggestions...</h4>
+                        <article class="friend-list">
+                            <div class="img">
+                                <img src="/images/1.jpg" alt="" width="50" class="frnd">
+                            </div>
+                            <div class="alignment">
+                            <div class="friend-name">Rafaella Mendes</div>
+                            <div class="adding-friends-container">
+                            <div class="add-friend" onclick="addFriend(this)">Add friend</div>
+                            <div class="delete" onclick="delFriend(this)">Del</div>
+                            </div>
+                            </div>
+                            <div class="cross-friend">&times</div>
+                        </article>
+                        <article class="friend-list">
+                            <div class="img">
+                                <img src="/images/2.jpg" alt="" width="50" class="frnd">
+                            </div>
+                            <div class="alignment">
+                            <div class="friend-name">John</div>
+                            <div class="adding-friends-container">
+                            <div class="add-friend" onclick="addFriend(this)">Add friend</div>
+                            <div class="delete" onclick="delFriend(this)">Del</div>
+                            </div>
+                            </div>
+                            <div class="cross-friend">&times</div>
+                        </article>
+                        <article class="friend-list">
+                            <div class="img">
+                                <img src="/images/3.jpg" alt="" width="50" class="frnd">
+                            </div>
+                            <div class="alignment">
+                            <div class="friend-name">Dooley</div>
+                            <div class="adding-friends-container">
+                            <div class="add-friend" onclick="addFriend(this)">Add friend</div>
+                            <div class="delete" onclick="delFriend(this)">Del</div>
+                            </div>
+                            </div>
+                            <div class="cross-friend">&times</div>
+                        </article>
+                        <article class="friend-list">
+                            <div class="img">
+                                <img src="/images/4.jpg" alt="" width="50" class="frnd">
+                            </div>
+                            <div class="alignment">
+                            <div class="friend-name">
+                                Aiony Haust</div>
+                            <div class="adding-friends-container">
+                            <div class="add-friend" onclick="addFriend(this)">Add friend</div>
+                            <div class="delete" onclick="delFriend(this)">Del</div>
+                            </div>
+                            </div>
+                            <div class="cross-friend">&times</div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="what-in-mind">
+                    <div class="uploadall">
+                    <img src="/images/11.jpg" alt="" class="personme">
+                        <input type="text" placeholder="What's on your mind?" class="whatmind">
+                    </div>
+                        <div class="both-upload">
+                        <div class="photo">
+                            <input type="file" name="file" id="fileUpload" accept="image/jpeg, image/png, image/jpg">
+                            <img src="/images/upload.png" alt="" width="40" class="photo-img">
+                    Photo
+                    </div>
+                    <div class="photo video">
+                        <img src="/images/video.png" alt="" width="40" class="photo-img">
+                        Video
+                        </div>
+                    <div class="photo" id="post-post">
+                            <img src="/images/post.png" alt="" width="40" class="photo-img">
+                            Post
+                    </div>
+                    </div>
+                </div>
+                <div class="postona">
+                <div class="posts-feedline">
+                    <div class="whole-user-info">
+                    <div class="post-name">
+                        <img src="/images/1.jpg" alt="" class="personme1">
+                        <div>
+                        <p class="persone-name">Rafaella Menas</p>
+                        <p style="font-size: 11px; margin-top: 2px;">10h <i class="fa fa-instagram"></i></p>
+                    </div>
+                    </div>
+                    <p class="post-text">I have enjoyed my trip to New-York city and there was alot of fun over there.</p>
+                    </div>
+                    <img src="/images/new-york1.jpg" alt="" class="user-post-image">
+                    <div>
+                    <div class="like-counts">
+                        <img src="/images/likebutton.png" alt="" width="40" style="filter: saturate(200%);"><p><span class="jama">332</span> likes</p></div>
+                        <div class="likes-comment-share">
+                            <button class="hover1 hover" id="likes" onclick="incrementLike(this)"><img src="/images/like.png" width="30" alt="" class="lcs1">Like</button>
+                            <button class="hover1 hover comments" onclick="comments(this)"><img src="/images/comment.png" width="30" class="lcs2" alt="">Comment</button>
+                            <button class="hover1 hover" onclick="sharepost(this)"><img src="/images/share.png" width="30" class="lcs3" alt="">Share</button>
+                        </div>
+                        </div>
+                    <div class="comment-section hidden">
+                        <div class="borderpadding">
+                            <h3 style="margin-bottom: 10px; font-style: italic; font-weight: lighter;color: rgb(156, 155, 154);">Comments...</h3>
+                            <div class="comment-box"> 
+                                <img src="/images/11.jpg" width="30" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;" alt="">
+                           <h4 style="color: black;">Mehran Khan</h4>
+                            </div>
+                            <input type="text" class="commnt-section" placeholder="Comment your thoughts...">
+                            <div class="allComments">
+                                
+                            </div>
+                            </div>
+                </div>
+                </div>
+                <div class="posts-feedline">
+                    <div class="whole-user-info">
+                    <div class="post-name">
+                        <img src="/images/2.jpg" alt="" class="personme1">
+                        <div>
+                        <p class="persone-name">John Wick</p>
+                        <p style="font-size: 11px; margin-top: 2px;">18h <i class="fa fa-instagram"></i></p>
+                    </div>
+                    </div>
+                    <p class="post-text">Now I'm releasing my fifth John Wick movie series. Hope you watch it and enjoy it.</p>
+                    </div>
+                    <img src="/images/johnwick.jpg" alt="" class="user-post-image">
+                    <div>
+                    <div class="like-counts">
+                        <img src="/images/likebutton.png" alt="" width="40" style="filter: saturate(200%);"><p><span class="jama">964</span> likes</p></div>
+                        <div class="likes-comment-share">
+                            <button class="hover1 hover" onclick="incrementLike(this)"><img src="/images/like.png" width="30"  alt="" class="lcs">Like</button>
+                            <button class="hover1 hover comments" onclick="comments(this)"><img src="/images/comment.png" width="30" class="lcs1" alt="">Comment</button>
+                            <button class="hover1 hover" onclick="sharepost(this)"><img src="/images/share.png" width="30" class="lcs2" alt="">Share</button>
+                        </div>
+                    </div>
+                    <div class="comment-section hidden">
+                        <div  class="borderpadding">
+                            <h3 style="margin-bottom: 10px; font-style: italic; font-weight: lighter;color: rgb(156, 155, 154);">Comments...</h3>
+                            <div class="comment-box"> 
+                                <img src="/images/11.jpg" width="30" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;" alt="">
+                           <h4 style="color: black;">Mehran Khan</h4>
+                            </div>
+                            <input type="text" class="commnt-section" placeholder="Comment your thoughts...">
+                            <div class="allComments">
+                            </div>
+                            </div>
+                </div>
+                </div>
+                <div class="posts-feedline">
+                    <div class="whole-user-info">
+                    <div class="post-name">
+                        <img src="/images/3.jpg" alt="" class="personme1">
+                        <div>
+                        <p class="persone-name">Dooley</p>
+                        <p style="font-size: 11px; margin-top: 2px;">3h <i class="fa fa-instagram"></i></p>
+                    </div>
+                    </div>
+                    <p class="post-text">I'm a photographer and I loving pictures of nature. Here below are my some pictures. Hope you will like it.</p>
+                    </div>
+                    <img src="/images/pexels-8moments-1266810.jpg" alt="" class="user-post-image marvel">
+                    <img src="/images/pexels-iriser-1122639.jpg" alt="" class="user-post-image marvel">
+                    <div>
+                    <div class="like-counts">
+                        <img src="/images/likebutton.png" alt="" width="40" style="filter: saturate(200%);"><p><span class="jama">996</span> likes</p></div>
+                        <div class="likes-comment-share">
+                            <button class="hover1 hover" onclick="incrementLike(this)"><img src="/images/like.png" width="30" alt="" class="lcs1">Like</button>
+                            <button class="hover1 hover comments" onclick="comments(this)"><img src="/images/comment.png" width="30" class="lcs2" alt="">Comment</button>
+                            <button class="hover1 hover" onclick="sharepost(this)"><img src="/images/share.png" width="30" class="lcs3" alt="">Share</button>
+                        </div>
+                        </div>
+                        <div class="comment-section hidden">
+                            <div class="borderpadding">
+                                <h3 style="margin-bottom: 10px; font-style: italic; font-weight: lighter;color: rgb(156, 155, 154);">Comments...</h3>
+                                <div class="comment-box"> 
+                                    <img src="/images/11.jpg" width="30" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;" alt="">
+                               <h4 style="color: black;">Mehran Khan</h4>
+                                </div>
+                                <input type="text" class="commnt-section" placeholder="Comment your thoughts...">
+                                <div class="allComments">
+                                </div>
+                                </div>
+                    </div>
+                </div>
+                <div class="posts-feedline">
+                    <div class="whole-user-info">
+                    <div class="post-name">
+                        <img src="/images/4.jpg" alt="" class="personme1">
+                        <div>
+                        <p class="persone-name">Aiony Haust</p>
+                        <p style="font-size: 11px; margin-top: 2px;">3h <i class="fa fa-instagram"></i></p>
+                    </div>
+                    </div>
+                    <p class="post-text">I'm a graphic designer. Some of the most incredible designs are here below.</p>
+                    </div>
+                    <img src="/images/graphic-design.png" alt="" class="user-post-image">
+                    <img src="/images/graphic-design2.png" alt="" class="user-post-image">
+                    <div>
+                    <div class="like-counts">
+                        <img src="/images/likebutton.png" alt="" width="40" style="filter: saturate(200%);"><p><span class="jama">1231</span> likes</p></div>
+                        <div class="likes-comment-share">
+                            <button class="hover1 hover" onclick="incrementLike(this)"><img src="/images/like.png" width="30" alt="" class="lcs1" >Like</button>
+                            <button class="hover1 hover comments" onclick="comments(this)"><img src="/images/comment.png" width="30" class="lcs2" alt="">Comment</button>
+                            <button class="hover1 hover" onclick="sharepost(this)"><img src="/images/share.png" width="30" class="lcs3" alt="">Share</button>
+                        </div>
+                        </div>
+                        <div class="comment-section hidden">
+                            <div class="borderpadding">
+                                <h3 style="margin-bottom: 10px; font-style: italic; font-weight: lighter;color: rgb(156, 155, 154);">Comments...</h3>
+                                <div class="comment-box"> 
+                                    <img src="/images/11.jpg" width="30" style="width: 30px; height: 30px; border-radius: 50%; margin-right: 10px;" alt="">
+                               <h4 style="color: black;">Mehran Khan</h4>
+                                </div>
+                                <input type="text" class="commnt-section" placeholder="Comment your thoughts...">
+                                <div class="allComments">
+                                </div>
+                                </div>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+            <div class="righted"></div>
+        </section>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
